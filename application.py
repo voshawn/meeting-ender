@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_apscheduler import APScheduler
 
@@ -5,6 +6,8 @@ from flask_apscheduler import APScheduler
 class Config(object):
     SCHEDULER_API_ENABLED = True
     SCHEDULER_TIMEZONE = 'UTC'
+    TWILIO_ACCOUNT_SID =  os.environ.get('TWILIO_ACCOUNT_SID')
+    TWILIO_AUTH_TOKEN =  os.environ.get('TWILIO_AUTH_TOKEN')
 
 
 application = Flask(__name__)
