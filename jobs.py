@@ -1,3 +1,3 @@
 
-def job1(a, b):
+def concat_two(a, b):
     print(str(a) + ' ' + str(b))
